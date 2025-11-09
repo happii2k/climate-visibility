@@ -42,7 +42,7 @@ class Visibility_Data:
         return df
     
 
-    def export_collection_as_dataframe(self ) -> pd.DataFrame:
+    def export_collection_as_dataframe(self ) -> pd.DataFrame :
         try: 
             collection = self.get_collection_name()
 
@@ -54,5 +54,11 @@ class Visibility_Data:
         except Exception as e :
             raise VisibilityException(e ,sys)
 
+if __name__ == "__main__":
+    data = Visibility_Data(database_name=MONGO_DATABASE_NAME)
+    collection_name = data.get_collection_name()
+    print(f"Collection name : {collection_name}")
+    collection_data = data.get_collection_data(collection_name.list_collection_names()[0])
+    print(f"Collection data : {collection_data.head()}")
 
 

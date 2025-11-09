@@ -18,7 +18,7 @@ class MainUtils:
                 return yaml.safe_load(yaml_file)
 
         except Exception as e:
-            raise VisibilityException(e, sys) from e
+            raise VisibilityException(e) from e
 
     def read_schema_config_file(self) -> dict:
         try:
@@ -27,7 +27,7 @@ class MainUtils:
             return schema_config
 
         except Exception as e:
-            raise VisibilityException(e, sys) from e
+            raise VisibilityException(e) from e
 
     
 
@@ -42,7 +42,7 @@ class MainUtils:
             logging.info("Exited the save_object method of MainUtils class")
 
         except Exception as e:
-            raise VisibilityException(e, sys) from e
+            raise VisibilityException(e) from e
 
     
 
@@ -59,6 +59,6 @@ class MainUtils:
             return obj
 
         except Exception as e:
-            raise VisibilityException(e, sys) from e
+            raise VisibilityException(e) from e
         
     

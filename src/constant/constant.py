@@ -14,7 +14,7 @@ password_escaped = urllib.parse.quote_plus(password)
 
  #"visibility-bucket-im"
 MONGO_DATABASE_NAME = "visibility"
-MONGODB_URL =  mongodb_url =  (
+MONGODB_URL =   (
     f"mongodb+srv://{username_escaped}:{password_escaped}@visibility.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000"
 )
 
@@ -24,5 +24,5 @@ CLUSTER_LABEL_COLUMN = "Cluster"
 MODEL_FILE_NAME = "model"
 MODEL_FILE_EXTENSION = ".pkl"
 
-artifact_folder_name = datetime.now().strftime('%m_%d_%Y_%H_%M_%S')
-artifact_folder =  os.path.join("artifacts", artifact_folder_name)
+
+artifact_folder =  "artifacts"
